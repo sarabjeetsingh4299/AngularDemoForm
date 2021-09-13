@@ -1,0 +1,46 @@
+body.mat-typography {
+    background: antiquewhite;
+}
+h1.fHead{
+    color: #e63946;
+    margin:20px;
+    font-weight: bold;
+    }
+.form{
+    display: flex;
+    font-size: large;
+    flex-direction: column;
+    width: 50vw;
+    margin: 20px;
+    color:#1b4332   ;
+    font-weight: 500;
+
+    
+    span{
+        color: red;
+        font-size: 15px;
+        font-weight: 600;
+        
+    }
+   
+    input,select{  
+        margin-bottom: 5px;
+        margin-left: 2px;
+        padding: 5px;
+        
+    }
+   
+
+    button{
+        width: 10rem;
+        margin: 10px 50px;
+
+        
+        font-size: 15px; 
+        font-weight: 600;
+        padding: 10px;
+        
+    }
+
+
+}

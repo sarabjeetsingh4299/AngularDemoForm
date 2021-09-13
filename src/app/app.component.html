@@ -1,0 +1,48 @@
+
+<h1 class="fHead">Angular Form</h1>   
+
+<form class="form" [formGroup]="loginForm" (ngSubmit)="userLogin()">
+    <label for="rffName">FIRSTNAME:<input type="text" formControlName="rffName"  ></label>
+    <span *ngIf="rffName && rffName.invalid && rffName.touched" style="color: red;"><ul>
+       <li> This Field is not valid </li>
+    <li>Must contain min 5 character</li></ul> </span>
+     
+    <label for="rflName">LASTNAME :<input type="text"  formControlName="rflName" ></label>
+    <span *ngIf="rflName && rflName.invalid && rflName.touched " style="color: red;"><ul>
+        <li> This Field is not valid </li>
+     <li>Must contain min 2 character</li></ul> </span>
+    
+    
+    <label for="rfMail">MAIL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="mail"  formControlName="rfMail" ></label>
+    <span *ngIf="rfMail && rfMail.invalid && rfMail.touched" style="color: red;"><ul>
+        <li> This Field is not valid </li>
+     <li>Example:-xyz@abc.com</li></ul> </span>
+    
+    <label for="rfAddress">ADDRESS &nbsp;&nbsp;&nbsp; :<input type="text"  formControlName="rfAddress" ></label>
+    <span *ngIf="rfAddress && rfAddress.invalid && rfAddress.touched" style="color: red;"><ul>
+        <li> This Field is not valid </li>
+     </ul> </span>
+    
+    <label for="rfState">STATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<select  type="text"  formControlName="rfState" >
+        <option value="">select</option>
+        <option value="Delhi">Delhi</option>
+        <option value="M.P">M.P</option>
+        <option value="U.P">U.P</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Haryana">Haryana</option>
+    </select></label>
+
+    <span *ngIf="rfState && rfState.invalid && rfState.touched" style="color: red;"><ul>
+        <li> This Field is not valid </li>
+     <li>Select any state</li></ul> </span>
+    
+    <label for="rfGender">GENDER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="radio"  formControlName="rfGender" value="male" >M
+        <input type="radio"  formControlName="rfGender" value="female" >F
+        <input type="radio"  formControlName="rfGender" value="other" >Other</label>
+    <span *ngIf="rfGender && rfGender.invalid && rfGender.touched" style="color: red;"><ul>
+        <li> This Field is not valid </li>
+     </ul> </span>
+    
+    <button  [disabled]="!loginForm.valid" >Submit</button>
+
+</form>
